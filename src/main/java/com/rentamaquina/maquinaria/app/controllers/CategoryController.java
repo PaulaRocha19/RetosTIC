@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.rentamaquina.maquinaria.app.controllers;
 
 import com.rentamaquina.maquinaria.app.entities.Category;
@@ -68,7 +63,8 @@ public class CategoryController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public boolean delete(@PathVariable("id") int categoryId) {
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") Integer categoryId) {
         return service.deleteCategory(categoryId);
     }
             

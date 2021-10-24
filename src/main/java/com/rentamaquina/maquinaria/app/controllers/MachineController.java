@@ -68,7 +68,8 @@ public class MachineController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public boolean delete(@PathVariable("id") int machineId) {
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") Integer machineId) {
         return service.deleteMachine(machineId);
     }
 }

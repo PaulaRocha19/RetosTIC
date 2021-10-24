@@ -69,7 +69,7 @@ public class CategoryService {
                 if(category.getName()!=null){
                     resultado.get().setName(category.getName());
                 }
-                if(category.getDescription()==null){
+                if(category.getDescription()!=null){
                     resultado.get().setDescription(category.getDescription());
                 }
                 repository.save(resultado.get());
